@@ -1,0 +1,16 @@
+[
+{
+  "modid": "configurator",
+  "name": "Configurator",
+  "description": "Library mod for creating custom JSON based config files",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Turing6"],
+  "credits": "",
+  "logoFile": "Icon.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
