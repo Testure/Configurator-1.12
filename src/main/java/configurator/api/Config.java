@@ -1,15 +1,12 @@
 package configurator.api;
 
-import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import configurator.Configurator;
 import configurator.util.Function2;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
 import javax.annotation.Nullable;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
@@ -19,12 +16,21 @@ public class Config {
     public final String folder;
     public final Type type;
     public final List<ConfigCategory> categories;
+    protected boolean loaded = false;
 
     protected Config(String folder, String name, Type type, List<ConfigCategory> categories) {
         this.folder = folder;
         this.name = name;
         this.type = type;
         this.categories = categories;
+    }
+
+    public boolean isLoaded() {
+        return loaded;
+    }
+
+    public void loaded() {
+        this.loaded = true;
     }
 
     public static class Builder {
