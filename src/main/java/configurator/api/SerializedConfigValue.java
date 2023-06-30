@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
  * {@link SerializedConfigValue#getReal()} returns the deserialized value.
  * </p>
  */
-public abstract class SerializedConfigValue<T> extends ConfigValue<String> {
+public abstract class SerializedConfigValue<T> extends StringConfigValue {
     /** The deserialized value */
     protected T realValue;
 
