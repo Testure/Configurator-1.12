@@ -3,10 +3,7 @@ package configurator;
 import configurator.api.Config;
 import configurator.api.ConfigValue;
 import mcp.MethodsReturnNonnullByDefault;
-import net.minecraftforge.fml.common.LoadController;
-import net.minecraftforge.fml.common.LoaderState;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.event.FMLConstructionEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
