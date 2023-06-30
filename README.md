@@ -1,3 +1,6 @@
+## About
+Configurator is a library mod for creating custom JSON based config files
+
 ## Copyright Notices
 ### Main
 Copyright (C) 2023 Turing6
