@@ -2,13 +2,13 @@ package configurator.api;
 
 import com.google.gson.JsonObject;
 import configurator.Configurator;
-import configurator.util.Function2;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.BiFunction;
 import java.util.function.Function;
 
 public class Config {
@@ -123,7 +123,7 @@ public class Config {
          * @param <C> custom config value class
          * @return the created ConfigValue
          */
-        public <T, C extends ConfigValue<T>> C defineCustom(String name, Function2<String, ConfigCategory, C> supplier, @Nullable T defaultValue) {
+        public <T, C extends ConfigValue<T>> C defineCustom(String name, BiFunction<String, ConfigCategory, C> supplier, @Nullable T defaultValue) {
             checkCurrentEdit();
             C value = supplier.apply(name, currentEdit);
             currentEdit.addValue(value);
@@ -140,7 +140,7 @@ public class Config {
          * @param <C> custom config value class
          * @return the created ConfigValue
          */
-        public <T, C extends SerializedConfigValue<T>> C defineCustomSerialized(String name, Function2<String, ConfigCategory, C> supplier, @Nullable T defaultValue) {
+        public <T, C extends SerializedConfigValue<T>> C defineCustomSerialized(String name, BiFunction<String, ConfigCategory, C> supplier, @Nullable T defaultValue) {
             checkCurrentEdit();
             C value = supplier.apply(name, currentEdit);
             currentEdit.addValue(value);
